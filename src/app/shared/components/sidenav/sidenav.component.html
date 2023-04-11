@@ -1,0 +1,18 @@
+<mat-drawer-container class="sidenav" [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'over'" [opened]="drawerIsOpen">
+    <p>SECCIONES</p>
+    <button 
+    mat-button color="primary" 
+    class="sidenav__link"
+    routerLink="camaras" 
+    (click)="closeSidenav()"
+    >
+      <mat-icon>dialpad</mat-icon>
+      <span>CAMARAS</span>
+    </button>
+  </mat-drawer>
+
+  <mat-drawer-content class="main-content">
+    <ng-content #mainContent></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
